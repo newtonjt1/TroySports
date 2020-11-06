@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<!--softball.html-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Troy Softball</title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+	</head>
+
+	<body>
+		<div>
+			<div id="header">
+				<h1>TROY Softball</h1>
+				<nav>SPORTS
+					<ul>
+						<li><a href="main.html">Home</a></li>
+						<li><a href="football.html">Football</a></li>
+						<li><a href="softball.html">Softball</a></li>
+						<li><a href="volleyball.html">Volleyball</a></li>
+						<li><a href="tennis.html">Tennis</a></li>
+					</ul>
+				</nav>
+			</div>
+							
+			<div class="row">
+				<div class="column">
+					<div id="picture">
+						<img src="photos/softball1.jpg" style="width:100%">
+					</div>
+				</div>
+				<div class="column">
+					<div id="picture">
+						<img src="photos/softball2.jpg" style="width:100%">
+					</div>
+				</div>
+				<div class="column">
+					<div id="picture">
+						<img src="photos/softball3.jpg" style="width:100%">
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<table border="1">
+			<caption>2020 Softball Schedule</caption>
+			<tr>
+				<th>DATE</th><th>TIME</th><th>OPPONENT</th>
+					<th>LOCATION</th>
+			</tr>
+			<tr>
+				<td>Oct.6</td><td>2:00 PM</td><td>Pearl River Community College</td><td>Troy, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.6</td><td>4:00 PM</td><td>Gulf Coast State College	</td><td>Troy, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.11</td><td>5:30 PM</td><td>University of West Florida</td><td>Dothan, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.11</td><td>7:30 PM</td><td>Chipola College</td><td>Dothan, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.13</td><td>1:00 PM</td><td>University of Mississippi</td><td>Birmingham, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.19</td><td>2:00 PM</td><td>Enterprise State Community College</td><td>Troy, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.21</td><td>5:00 PM</td><td>Central Alabama Community College</td><td>Troy, AL</td>
+			</tr>
+			<tr>
+				<td>Oct.21</td><td>6:30 PM</td><td>Northeast Mississippi Community College</td><td>Troy, AL</td>
+			</tr>
+		</table>
+		
+		<div class="row">
+			<marquee behavior="alternate" scrollamount="30">
+				<div id="canvasDrawing">
+					<canvas id="trojanCanvas" width="700" height="200" style="border: none, opacity: 0.5;"></canvas>
+				</div>
+			</marquee>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+
+		var c = document.getElementById("trojanCanvas");
+		var ctx = c.getContext("2d");
+		var gradient = ctx.createLinearGradient(0, 0, c.width, 0);
+		gradient.addColorStop("0", "crimson");
+		gradient.addColorStop("0.5", "gray");
+		gradient.addColorStop("1.0", "red");
+		ctx.font = "100px Arial";
+		ctx.fillStyle = gradient;
+		ctx.textAlign = "center";
+		ctx.fillText("Go Trojans!", c.width/2, c.height/2);
+
+	</script>
+
+
+</html>
